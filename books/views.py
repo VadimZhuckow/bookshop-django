@@ -27,6 +27,8 @@ def random_book(request: HttpRequest) -> HttpResponse:
 
 
 def view_all_book(request):
+
+    
     return JsonResponse(
         BOOKS,
         safe=False,
@@ -35,8 +37,6 @@ def view_all_book(request):
             "ensure_ascii": False
         }
     )
-
-
 
 
 def custom_404(request: HttpRequest, exception) -> HttpResponse:
